@@ -1,0 +1,104 @@
+import React, { Component } from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
+const routes = [
+    {
+        path: "/header",
+        component: Header
+    },
+    {
+        path: "/body",
+        component: Body,
+        routes: [
+        {
+            path: "/body/body_item_one",
+            component: BodyItemOne
+        },
+        {
+            path: "/body/body_item_two",
+            component: BodyItemTwo
+        }
+        ]
+    },
+    {
+        path: "/footer",
+        component: Footer,
+    }
+];
+
+export default function Home() {
+    return (
+        <Router>
+        <div>
+            <ul>
+                <li><Link to="/header">Header</Link></li>
+                <li><Link to="/body">Body</Link></li>
+                <li><Link to="/footer">Footer</Link></li>
+            </ul>
+
+            <Switch>
+            {
+            routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route} />
+            ))
+            }
+            </Switch>
+        </div>
+        </Router>
+    );
+}
+
+function RouteWithSubRoutes(route) {
+    return (
+        <Route
+            path={route.path}
+            render={props => (
+                // pass the sub-routes down to keep nesting
+                <route.component {...props} routes={route.routes} />
+            )}
+        />
+    );
+}
+
+function Header() {
+    return <h2>Header</h2>;
+}
+
+function Body({ routes }) {
+    return (
+        <div>
+        <h2>Body</h2>
+        <ul>
+            <li>
+            <Link to="/body/body_item_one">BodyItemOne</Link>
+            </li>
+            <li>
+            <Link to="/body/body_item_two">BodyItemTwo</Link>
+            </li>
+        </ul>
+
+        <Switch>
+            {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+            ))}
+        </Switch>
+        </div>
+    );
+}
+
+function BodyItemOne() {
+    return <h3>Body Item One</h3>;
+}
+
+function BodyItemTwo() {
+    return <h3>Body Item Two</h3>;
+}
+
+function Footer() {
+    return <h3>Footer</h3>;
+}
