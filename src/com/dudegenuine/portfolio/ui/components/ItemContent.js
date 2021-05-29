@@ -18,8 +18,8 @@ class App extends Component {
         return(
             <section id={id} className="main special">
 				<div className="container">
-					<div className="content">
-						{ logo != null && // className={page != 0 && "img-wrapper"}
+					<div className={`content ${logo && 'container-pjct'}`} onClick={() => logo && this.setState({page: page +1})}>
+						{ logo != null &&
 						<div><img
 							className={page != 0 ? "content project-item" : "logo"} style={{borderRadius: 5}}
 							src={page >= logo.length ? this.setState({page:0}) : logo[page]} 
