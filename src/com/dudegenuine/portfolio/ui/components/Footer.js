@@ -50,7 +50,7 @@ class App extends Component {
 						<li><a href="https://twitter.com/utifmd/" target="_blank" rel="noreferrer" className="icon brands alt fa-twitter"><span className="label">Twitter</span></a></li>
 						<li><a href="https://instagram.com/utifmd/" target="_blank" rel="noreferrer" className="icon brands alt fa-instagram"><span className="label">Instagram</span></a></li>
 						<li><a href="mailto:utifmd@gmail.com" target="_blank" rel="noreferrer" className="icon solid alt fa-envelope"><span className="label">Email</span></a></li>
-						<li><a href="https://drive.google.com/file/d/1cvqB1ZU-s6zd04ex0nk9zYvIV2ub81-Z/view?usp=sharing" target="_blank" rel="noreferrer" className="icon solid alt fa-external-link-alt"><span className="label">Resume</span></a></li>
+						<li><a href="https://drive.google.com/file/d/1VfYR-yoGHx-mT9g6qXnAPb3NlFhKJzVd/view?usp=sharing" target="_blank" rel="noreferrer" className="icon solid alt fa-external-link-alt"><span className="label">Resume</span></a></li>
 					</ul>
 				</footer>
 			</section>
