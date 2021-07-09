@@ -6,7 +6,7 @@ import IntroContent from './components/IntroContent'
 import ItemContent from './components/ItemContent'
 import Footer from './components/Footer'
 
-import ic_holy from './images/project/ic_holy.png'
+import ic_holy from './images/project/holy/ic_holy.png'
 import holy_0 from './images/project/holy/0.png'
 import holy_1 from './images/project/holy/1.png'
 import holy_2 from './images/project/holy/2.png'
@@ -15,7 +15,7 @@ import holy_4 from './images/project/holy/4.png'
 import holy_5 from './images/project/holy/5.png'
 import holy_6 from './images/project/holy/6.png'
 
-import ic_covid from './images/project/ic_covid.png'
+import ic_covid from './images/project/covid/ic_covid.png'
 import covid_0 from './images/project/covid/0.png'
 import covid_1 from './images/project/covid/1.png'
 import covid_2 from './images/project/covid/2.png'
@@ -64,7 +64,7 @@ export default class Home extends Component {
 				<IntroContent id="stuff_i_do" title="Stuff I do" desc="Some of the projects we are building include mobile applications, web applications and machine learning which are branches of artificial intelligence, but for now we are focusing on developing android applications." 
 					list={[['Kotlin Android', 'code'], ['Java Android', 'coffee'], ['React Native', 'code'], ['Cloud computing', 'cloud']]} next="app_quran" />
 				<ItemContent id="app_quran" 
-					title="Manual Book" logo={[ic_holy, holy_0, holy_1, holy_3, holy_4, holy_5, holy_6]}
+					title="Manual Book" logo={[ic_holy, holy_0, holy_1, holy_2, holy_3, holy_4, holy_5, holy_6]}
 					desc="A Holy Quran Android App implements Android library module with Clean Architecture And SOLID principle using MVVM design pattern with Dependency Injection using Dagger, Media player, Databinding, Viewbinding, Navigation Component, Retrofit, Livedata, Coroutine Concurrency, etc." 
 					next="app_covid" 
 					// next="app_who_kows" 
@@ -74,7 +74,7 @@ export default class Home extends Component {
 					desc="A public multi user Java Android Quiz App with Model View Presenter (MVP) Architecture implements Dependency Injection using Dagger HILT, Room database, Mysql database, Alarm manager, Broadcast Receiver, RxJava2, etc." 
 					next="app_covid" /> */}
 				<ItemContent id="app_covid" 
-					title="Covid Update" logo={[ic_covid, covid_0, covid_1, covid_3, covid_4, covid_5, covid_6]}
+					title="Covid Update" logo={[ic_covid, covid_0, covid_1, covid_2, covid_3, covid_4, covid_5, covid_6]}
 					desc="An Experimental Kotlin Android App with Model View Viewmodel (MVVM) Architecture implements Dependency Injection using Koin, Room database, Databinding, Viewbinding, Navigation Component, Retrofit2, Coroutine etc." 
 					next="app_babinsa" />
 				<ItemContent id="app_babinsa" 

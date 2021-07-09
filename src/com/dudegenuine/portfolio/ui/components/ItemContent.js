@@ -1,5 +1,6 @@
 import { Component } from 'react'
-import ModalImage , { } from 'react-modal-image'
+import Zoom , { } from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 class App extends Component {
 
@@ -32,11 +33,13 @@ class App extends Component {
 							<h2>{title}</h2>
 						</header>
 						{ banner != null && 
-							<div><ModalImage className="content"
-								small={banner.m}
-								large={banner.l}
-								alt={title}/><br /><br />
-							</div> 
+							<div>
+								<Zoom> <img alt={title} src={banner.l} width="500" style={{ 
+									display: 'inline-block', 
+									margin: 5, 
+									width: 'calc(100% - 10px)'
+								}}/></Zoom><br /> <br />
+							</div>
 						}
 						<p>{desc}</p>
 					</div>
