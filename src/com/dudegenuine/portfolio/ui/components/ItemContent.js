@@ -9,7 +9,7 @@ class App extends Component {
 			page: 0
 		}
 	}
-
+	
     render(){
 		let 
 			{ id, title, desc, logo, banner, background, next } = this.props,
@@ -18,12 +18,14 @@ class App extends Component {
         return(
             <section id={id} className="main special">
 				<div className="container">
-					<div className={`content ${logo && 'container-pjct'}`} onClick={() => logo && this.setState({page: page +1})}>
+					<div className={`content ${logo && 'project-item'}`} onClick={() => logo && this.setState({page: page +1})}>
 						{ logo != null &&
-						<div><img
-							className={page != 0 ? "content project-item" : "logo"} style={{borderRadius: 5}}
-							src={page >= logo.length ? this.setState({page:0}) : logo[page]} 
-							onClick={() => this.setState({page: page +1})}/><br /><br />
+						<div>
+							<img className={page != 0 ? "content project-item" : "logo"} style={{borderRadius: 5}} src={page >= logo.length ? this.setState({page:0}) : logo[page]}/><br /><br />
+							{/* <ul>
+								<img style={{width:24, height: 24, margin:6}} src={logo[page]}></img>
+								<li></li>
+							</ul> */}
 						</div>
 						}
 						<header className="major">
@@ -33,11 +35,12 @@ class App extends Component {
 							<div><ModalImage className="content"
 								small={banner.m}
 								large={banner.l}
-								alt={title}/><br /><br /></div> 
+								alt={title}/><br /><br />
+							</div> 
 						}
 						<p>{desc}</p>
 					</div>
-					<a onClick={() => document.getElementById(next).scrollIntoView({behavior: 'smooth'})} className="goto-next">Next</a>
+					<a className="goto-next scrolly" onClick={() => document.getElementById(next).scrollIntoView({behavior: 'smooth'})}>Next</a>
 				</div>
 			</section>
         )

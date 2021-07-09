@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-// import resume from '../images/academy/resume.pdf'
-
 class App extends Component {
 
 	sendMail = () => {
@@ -11,7 +9,7 @@ class App extends Component {
 			message = this.getElemValue('message')
 		
 		if(sender !== '' && email !== '' && message !== ''){
-			window.location.href = 'mailto:mail@company.com?subject=The subject - ' + sender + ' (' + email + ')' + '&body=' + message;
+			window.location.href = `mailto:utifmd@gmail.com?subject=About your portfolio - ${sender} (${email})&body=${message}`
 			sender = ""; email = ""; message = ""
 		}
 	}
@@ -48,6 +46,7 @@ class App extends Component {
 						<li><a href="https://linkedin.com/in/utifmd/" target="_blank" rel="noreferrer" className="icon brands alt fa-linkedin"><span className="label">Linkedin</span></a></li>
 						<li><a href="https://medium.com/@utifmd/" target="_blank" rel="noreferrer" className="icon brands alt fa-medium"><span className="label">Medium</span></a></li>
 						<li><a href="https://github.com/utifmd/" target="_blank" rel="noreferrer" className="icon brands alt fa-github"><span className="label">Github</span></a></li>
+						<li><a href="https://stackoverflow.com/users/6235678/utif-milkedori" target="_blank" rel="noreferrer" className="icon brands alt fa-stack-overflow"><span className="label">StackOverflow</span></a></li>
 						<li><a href="https://twitter.com/utifmd/" target="_blank" rel="noreferrer" className="icon brands alt fa-twitter"><span className="label">Twitter</span></a></li>
 						<li><a href="https://instagram.com/utifmd/" target="_blank" rel="noreferrer" className="icon brands alt fa-instagram"><span className="label">Instagram</span></a></li>
 						<li><a href="mailto:utifmd@gmail.com" target="_blank" rel="noreferrer" className="icon solid alt fa-envelope"><span className="label">Email</span></a></li>

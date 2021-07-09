@@ -14,15 +14,15 @@ class App extends Component {
 						{ cover != null ? <img src={cover} /> : null }
 						<p>{desc}</p>
 						<ul className="icons-grid">
-						{ list != null ? list.map(item => 
-							<li>
+						{ list != null ? list.map((item, idx) => 
+							<li key={idx}>
 								<span className={`icon solid major fa-${item[1]}`}></span>
 								<h3>{item[0]}</h3>
 							</li>
 						) : null }
 						</ul>
 					</div>
-					<a onClick={() => document.getElementById(next).scrollIntoView({behavior: 'smooth'})} className="goto-next scrolly">Next</a>
+					<a className="goto-next scrolly" onClick={() => document.getElementById(next).scrollIntoView({behavior: 'smooth'})}>Next</a>
 				</div>
 			</section>
         )

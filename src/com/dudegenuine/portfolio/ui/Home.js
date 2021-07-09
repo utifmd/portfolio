@@ -6,8 +6,25 @@ import IntroContent from './components/IntroContent'
 import ItemContent from './components/ItemContent'
 import Footer from './components/Footer'
 
-import ic_launcher from './images/project/ic_launcher.png'
-import cover_babinsa from './images/project/babinsa/babinsa.png'
+import ic_holy from './images/project/ic_holy.png'
+import holy_0 from './images/project/holy/0.png'
+import holy_1 from './images/project/holy/1.png'
+import holy_2 from './images/project/holy/2.png'
+import holy_3 from './images/project/holy/3.png'
+import holy_4 from './images/project/holy/4.png'
+import holy_5 from './images/project/holy/5.png'
+import holy_6 from './images/project/holy/6.png'
+
+import ic_covid from './images/project/ic_covid.png'
+import covid_0 from './images/project/covid/0.png'
+import covid_1 from './images/project/covid/1.png'
+import covid_2 from './images/project/covid/2.png'
+import covid_3 from './images/project/covid/3.png'
+import covid_4 from './images/project/covid/4.png'
+import covid_5 from './images/project/covid/5.png'
+import covid_6 from './images/project/covid/6.png'
+
+import ic_babinsa from './images/project/ic_launcher.png'
 import babinsa_1 from './images/project/babinsa/1.png'
 import babinsa_2 from './images/project/babinsa/2.png'
 import babinsa_3 from './images/project/babinsa/3.png'
@@ -30,32 +47,47 @@ import img_l_solid from './images/academy/l-solid.png'
 import img_l_visualdata from './images/academy/l-visualdata.png'
 
 export default class Home extends Component {
+
+	// handleScroll = e => {
+	// 	let element = e.target
+	// 	if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+	// 		console.log('do something at end of scroll')
+	// 	}
+	// }
+
 	render(){
 		return (
 			<body className="is-preload">
+				<div>
 				<Header id="header" next="who_i_am" />
 				<ItemContent id="who_i_am" title="Who I Am" desc="I am a self-taught software developer with strong passion to learn new things. I am familiar with a few Java, Kotlin android using android studio & Node JS frameworks as a cross mobile platform, and I also have developed backend API for a production system using native & framework. Currently I am interested and learning about Machine learning development using python. I also enjoy to play music on my spare time." next="stuff_i_do" />
 				<IntroContent id="stuff_i_do" title="Stuff I do" desc="Some of the projects we are building include mobile applications, web applications and machine learning which are branches of artificial intelligence, but for now we are focusing on developing android applications." 
-					list={[['Kotlin Android', 'code'], ['Java Android', 'coffee'], ['React Native', 'code'], ['Cloud computing', 'cloud']]} next="app_who_kows" />
-				<ItemContent id="app_who_kows" 
-					title="Who Knows" logo={[ic_launcher, babinsa_1, babinsa_2, babinsa_3, babinsa_4, babinsa_5]}
-					desc="A public multi user Java Android Quiz App with Model View Presenter (MVP) Architecture implements Dependency Injection using Dagger HILT, Room database, Mysql database, Alarm manager, Broadcast Receiver, etc." 
-					next="app_covid" />
+					list={[['Kotlin Android', 'code'], ['Java Android', 'coffee'], ['React Native', 'code'], ['Cloud computing', 'cloud']]} next="app_quran" />
+				<ItemContent id="app_quran" 
+					title="Manual Book" logo={[ic_holy, holy_0, holy_1, holy_3, holy_4, holy_5, holy_6]}
+					desc="A Holy Quran Android App implements Android library module with Clean Architecture And SOLID principle using MVVM design pattern with Dependency Injection using Dagger, Media player, Databinding, Viewbinding, Navigation Component, Retrofit, Livedata, Coroutine Concurrency, etc." 
+					next="app_covid" 
+					// next="app_who_kows" 
+					/>
+				{/* <ItemContent id="app_who_kows" 
+					title="Anyone Knows" logo={[ic_launcher, babinsa_1, babinsa_2, babinsa_3, babinsa_4, babinsa_5]}
+					desc="A public multi user Java Android Quiz App with Model View Presenter (MVP) Architecture implements Dependency Injection using Dagger HILT, Room database, Mysql database, Alarm manager, Broadcast Receiver, RxJava2, etc." 
+					next="app_covid" /> */}
 				<ItemContent id="app_covid" 
-					title="Covid Update" logo={[ic_launcher, babinsa_1, babinsa_2, babinsa_3, babinsa_4, babinsa_5]}
-					desc="An Experimental Kotlin Android App with Model View Viewmodel (MVVM) Architecture implements Dependency Injection using Koin, Room database, Databinding, Viewbinding, Navigation Component, Retrofit2, RxJava etc." 
+					title="Covid Update" logo={[ic_covid, covid_0, covid_1, covid_3, covid_4, covid_5, covid_6]}
+					desc="An Experimental Kotlin Android App with Model View Viewmodel (MVVM) Architecture implements Dependency Injection using Koin, Room database, Databinding, Viewbinding, Navigation Component, Retrofit2, Coroutine etc." 
 					next="app_babinsa" />
 				<ItemContent id="app_babinsa" 
-					title="Babinsa Daily Report" logo={[ic_launcher, babinsa_1, babinsa_2, babinsa_3, babinsa_4, babinsa_5]}
-					desc="Daily Activity Reports of BABINSA TNI-AD Kabupaten Tanah Datar Sumatera Barat using React Native, NodeJs, Firebase, Phone Authentication, Cloud Messaging, GPS etc." 
-					// next="app_what_else" 
+					title="Babinsa Daily Reports" logo={[ic_babinsa, babinsa_1, babinsa_2, babinsa_3, babinsa_4, babinsa_5]}
+					desc="Daily Activity Report of BABINSA TNI-AD Kabupaten Tanah Datar Sumatera Barat using React Native, NodeJs, Firebase, Phone Authentication, Cloud Messaging, GPS etc." 
 					next="what_ive_done" 
+					// next="app_what_else" 
 					/>
 				{/* <ItemContent id="app_what_else" 
 					title="What else" logo={[ic_launcher]} 
 					desc="An experimental TODO Java Android App implements Room Database, MVVM, LiveData, ViewBinding, DataBinding etc." 
-					next="app_mbkg_earthquake" />
-				<ItemContent id="app_mbkg_earthquake" 
+					next="what_ive_done" /> */}
+				{/* <ItemContent id="app_mbkg_earthquake" 
 					title="Daily Earthquake" logo={[ic_launcher]} 
 					desc="An experimenatal Java Android App using BMKG (Badan Meteorologi Geofisika) Public Data Api implements Room database, MVVM architecture, LiveData, Retrofit, XML REST API etc." 
 					next="what_ive_done" /> */}
@@ -104,8 +136,8 @@ export default class Home extends Component {
 					/>
 				{/* <ItemContent id="one_more_thing" title="One More Thing" desc="Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum." next="footer" /> */}
 				<Footer />
+				</div>
 			</body>
 		);
 	}
-
 }
