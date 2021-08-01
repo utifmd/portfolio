@@ -1,7 +1,19 @@
 import { Component } from 'react'
 import Zoom , { } from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+/*
 
+import img_m_android from './images/academy/m-android.png'
+import img_m_aws from './images/academy/m-aws.png'
+import img_m_kotlin from './images/academy/m-kotlin.png'
+import img_m_java from './images/academy/m-java.png'
+import img_m_ml from './images/academy/m-ml.png'
+import img_m_ml_mid from './images/academy/m-ml-middle.png'
+import img_m_python from './images/academy/m-python.png'
+import img_m_solid from './images/academy/m-solid.png'
+import img_m_visualdata from './images/academy/m-visualdata.png'
+
+*/
 class App extends Component {
 
 	constructor(){

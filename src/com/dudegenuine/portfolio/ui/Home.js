@@ -30,18 +30,19 @@ import babinsa_2 from './images/project/babinsa/2.png'
 import babinsa_3 from './images/project/babinsa/3.png'
 import babinsa_4 from './images/project/babinsa/4.png'
 import babinsa_5 from './images/project/babinsa/5.png'
+import babinsa_6 from './images/project/babinsa/6.png'
+import babinsa_7 from './images/project/babinsa/7.png'
+import babinsa_8 from './images/project/babinsa/8.png'
+import babinsa_9 from './images/project/babinsa/9.png'
+import babinsa_10 from './images/project/babinsa/10.png'
+import babinsa_11 from './images/project/babinsa/11.png'
 
-import img_m_android from './images/academy/m-android.png'
-import img_m_aws from './images/academy/m-aws.png'
-import img_m_kotlin from './images/academy/m-kotlin.png'
-import img_m_ml from './images/academy/m-ml.png'
-import img_m_python from './images/academy/m-python.png'
-import img_m_solid from './images/academy/m-solid.png'
-import img_m_visualdata from './images/academy/m-visualdata.png'
 import img_l_android from './images/academy/l-android.png'
 import img_l_aws from './images/academy/l-aws.png'
 import img_l_kotlin from './images/academy/l-kotlin.png'
+import img_l_java from './images/academy/l-java.png'
 import img_l_ml from './images/academy/l-ml.png'
+import img_l_ml_mid from './images/academy/l-ml-middle.png'
 import img_l_python from './images/academy/l-python.png'
 import img_l_solid from './images/academy/l-solid.png'
 import img_l_visualdata from './images/academy/l-visualdata.png'
@@ -65,7 +66,7 @@ export default class Home extends Component {
 					list={[['Kotlin Android', 'code'], ['Java Android', 'coffee'], ['React Native', 'code'], ['Cloud computing', 'cloud']]} next="app_quran" />
 				<ItemContent id="app_quran" 
 					title="Manual Book" logo={[ic_holy, holy_0, holy_1, holy_2, holy_3, holy_4, holy_5, holy_6]}
-					desc="A Holy Quran Android App implements Android library module with Clean Architecture And SOLID principle using MVVM design pattern with Dependency Injection using Dagger, Media player, Databinding, Viewbinding, Navigation Component, Retrofit, Livedata, Coroutine Concurrency, etc." 
+					desc="A Holy Quran Android App implements Android library module with Clean Architecture And SOLID principle using MVVM design pattern with Dependency Injection using Dagger, Media player, Databinding, Viewbinding, Navigation Component, Retrofit, Livedata, Coroutine Concurrency, Paging 3, etc." 
 					next="app_covid" 
 					// next="app_who_kows" 
 					/>
@@ -78,7 +79,7 @@ export default class Home extends Component {
 					desc="An Experimental Kotlin Android App with Model View Viewmodel (MVVM) Architecture implements Dependency Injection using Koin, Room database, Databinding, Viewbinding, Navigation Component, Retrofit2, Coroutine etc." 
 					next="app_babinsa" />
 				<ItemContent id="app_babinsa" 
-					title="Babinsa Daily Reports" logo={[ic_babinsa, babinsa_1, babinsa_2, babinsa_3, babinsa_4, babinsa_5]}
+					title="Babinsa Daily Reports" logo={[ic_babinsa, babinsa_1, babinsa_2, babinsa_3, babinsa_4, babinsa_5, babinsa_6, babinsa_7, babinsa_8, babinsa_9, babinsa_10, babinsa_11]}
 					desc="Daily Activity Report of BABINSA TNI-AD Kabupaten Tanah Datar Sumatera Barat using React Native, NodeJs, Firebase, Phone Authentication, Cloud Messaging, GPS etc." 
 					next="what_ive_done" 
 					// next="app_what_else" 
@@ -95,41 +96,43 @@ export default class Home extends Component {
 					list={[['College Student', 'book'], ['Android Develop', 'code'], ['Cloud Practitioner', 'cloud'], ['Machine Learning', 'robot']]}
 					next="lesson_college"/>
 				<ItemContent id="lesson_college" 
-					title="Bachelor's Degree" // banner={{m: , l: }}
+					title="Bachelor of Computer Science" // banner={{m: , 0: }}
 					desc="The Information Systems Study Program teaches the foundation of science and the application of Information Technology in an organization. Computing, management and business which are branches of Information Systems." 
 					next="lesson_data_visual" />
 				<ItemContent id="lesson_data_visual" 
-					title="Data Visualization" banner={{m: img_m_visualdata, l: img_l_visualdata}} 
+					title="Data Visualization" banner={{m: 0, l: img_l_visualdata}} 
 					desc="Learn about technology for a visual representation of results so they can tell and present data effectively."
 					next="lesson_python" />
 				<ItemContent id="lesson_python" 
-					title="Python Programming" banner={{m: img_m_python, l:img_l_python }} 
+					title="Python Programming" banner={{m: 0, l:img_l_python }} 
 					desc="Learn the Python language which is the basis for various industry trends such as data science, machine learning, and infrastructure management." 
-					// next="lesson_java" 
-					next="lesson_kotlin" 
-					/>
-				{/* <ItemContent id="lesson_java" 
-					title="Java Programming" // banner={{m: , l: }} 
+					next="lesson_java"/>
+				<ItemContent id="lesson_java" 
+					title="Java Programming" banner={{m: 0, l: img_l_java}} 
 					desc="Mempelajari bahasa Java (JVM) mengenai konsep Pemrograman Berorientasi Objek (PBO) terpopuler untuk mengembangkan aplikasi." 
-					next="lesson_kotlin" /> */}
+					next="lesson_kotlin" />
 				<ItemContent id="lesson_kotlin" 
-					title="Kotlin Programming" banner={{m: img_m_kotlin, l: img_l_kotlin}} 
+					title="Kotlin Programming" banner={{m: 0, l: img_l_kotlin}} 
 					desc="Learn the Kotlin programming language, functional programming, object-oriented programming (OOP), and concurrency using coroutines." 
 					next="lesson_solid" />
 				<ItemContent id="lesson_solid" 
-					title="SOLID Programming Principles" banner={{m: img_m_solid, l: img_l_solid}}  
+					title="SOLID Programming Principles" banner={{m: 0, l: img_l_solid}}  
 					desc="Learn the design principles of Single Responsibility, Open Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion which are guidelines for good code design in object-oriented programming (OOP)."
 					next="lesson_android" />
 				<ItemContent id="lesson_android" 
-					title="Android Development" banner={{m: img_m_android, l: img_l_android}}
+					title="Android Development" banner={{m: 0, l: img_l_android}}
 					desc="Learn and create Android applications using Android Studio by implementing State management, Activity, Intent, View & ViewGroup, Style & Theme to RecyclerView etc."
 					next="lesson_ml" />
 				<ItemContent id="lesson_ml" 
-					title="Machine Learning" banner={{m: img_m_ml, l: img_l_ml}}  
+					title="Machine Learning" banner={{m: 0, l: img_l_ml}}  
 					desc="Learn machine learning development materials and steps to create machine learning models in data processing."
+					next="lesson_ml_mid" />
+				<ItemContent id="lesson_ml_mid" 
+					title="Machine Learning Development" banner={{m: 0, l: img_l_ml_mid}}  
+					desc="Learn about machine learning implementations in industry, from computer vision, natural language, and machine learning project deployment."
 					next="lesson_aws" />
 				<ItemContent id="lesson_aws" 
-					title="Cloud Practitioner Essentials" banner={{m: img_m_aws, l: img_l_aws}}  
+					title="Cloud Practitioner Essentials" banner={{m: 0, l: img_l_aws}}  
 					desc="Learn about the Cloud environment using the AWS Cloud, the basic concepts of cloud computing and how to build a good cloud architecture."
 					next="footer"
 					// next="one_more_thing" 
