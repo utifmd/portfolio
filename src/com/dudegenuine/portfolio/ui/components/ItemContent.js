@@ -25,7 +25,7 @@ class App extends Component {
 	
     render(){
 		let 
-			{ id, title, desc, logo, banner, background, next } = this.props,
+			{ id, title, desc, logo, source, banner, background, next } = this.props,
 			{ page } = this.state
 
         return(
@@ -42,7 +42,7 @@ class App extends Component {
 						</div>
 						}
 						<header className="major">
-							<h2>{title}</h2>
+							<h2>{title}<br />{source != null && <a className='icon brands alt fa-android' target='_blank' rel='noreferrer' href={source}></a>}</h2>
 						</header>
 						{ banner != null && 
 							<div>

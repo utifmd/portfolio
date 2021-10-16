@@ -65,7 +65,7 @@ export default class Home extends Component {
 				<IntroContent id="stuff_i_do" title="Stuff I do" desc="Some of the projects we are building include mobile applications, web applications and machine learning which are branches of artificial intelligence, but for now we are focusing on developing android applications." 
 					list={[['Kotlin Android', 'code'], ['Java Android', 'coffee'], ['React Native', 'code'], ['Cloud computing', 'cloud']]} next="app_quran" />
 				<ItemContent id="app_quran" 
-					title="Manual Book" logo={[ic_holy, holy_0, holy_1, holy_2, holy_3, holy_4, holy_5, holy_6]}
+					title="Manual Book" source="https://github.com/utifmd/Manual-Book/releases" logo={[ic_holy, holy_0, holy_1, holy_2, holy_3, holy_4, holy_5, holy_6]}
 					desc="A Holy Quran Android App implements Android library module with Clean Architecture And SOLID principle using MVVM design pattern with Dependency Injection using Dagger, Media player, Databinding, Viewbinding, Navigation Component, Retrofit, Livedata, Coroutine Concurrency, Paging 3, etc." 
 					next="app_covid" 
 					// next="app_who_kows" 
@@ -75,7 +75,7 @@ export default class Home extends Component {
 					desc="A public multi user Java Android Quiz App with Model View Presenter (MVP) Architecture implements Dependency Injection using Dagger HILT, Room database, Mysql database, Alarm manager, Broadcast Receiver, RxJava2, etc." 
 					next="app_covid" /> */}
 				<ItemContent id="app_covid" 
-					title="Covid Update" logo={[ic_covid, covid_0, covid_1, covid_2, covid_3, covid_4, covid_5, covid_6]}
+					title="Covid Update" source="https://github.com/utifmd/Covid-Nowdays~/releases" logo={[ic_covid, covid_0, covid_1, covid_2, covid_3, covid_4, covid_5, covid_6]}
 					desc="An Experimental Kotlin Android App with Model View Viewmodel (MVVM) Architecture implements Dependency Injection using Koin, Room database, Databinding, Viewbinding, Navigation Component, Retrofit2, Coroutine etc." 
 					next="app_babinsa" />
 				<ItemContent id="app_babinsa" 
